@@ -30,18 +30,20 @@ cacheSolve <- function(x, ...) {
 
 ## Test the functions using dummy matrix created
 
+##Create a matrix:
 my_matrix <- makeCacheMatrix(matrix(6:9, 2, 2))
-my_matrix$get()
+
+##Test the function with get() and getinverse() matrix
+my_matrix$get() 
 my_matrix$getInverse()
 
+## Test the cacheSolve() function using the my_matrix data created
 cacheSolve(my_matrix)
-my_matrix$getInverse()
 
+## Test the functions using another matrix with similar commands:
 my_matrix$set(matrix(c(7, 8, 9, 10), 2, 2))
 my_matrix$get()
 
 my_matrix$getInverse()
 
 cacheSolve(my_matrix)
-
-my_matrix$getInverse()
